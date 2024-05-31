@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather App Test</title>
+	<script src="bundle.js" defer></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<h1 style="text-align: center;">Weather Checker</h1>
+	<div class="container">
+		<!-- First Row -->
+		<div class="row mb-2">
+			<div class="col-md-4 p-2">
+				<div id="SearchDiv" class="grid-box p-2">
+					<h4><b>Search for a city</b></h4>
+					<hr>
+					<p id="CurrDisplay">Currently displaying info for: xxxxxxxx</p>
+					<hr>
+					<div style="clear: both;">
+						<p style="vertical-align: middle; margin: 10px 0px; width: 30%; float: left;"><b>City *</b></p>
+						<input id="City" class="InputItem" type="text" value="">
+					</div>
+					<div style="clear: both;">
+						<button id="Search">Submit</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 p-2">
+				<div id="WeatherDiv" class="grid-box p-2">
+					<h4><b>Current Weather Situation</b></h4>
+					<hr>
+					<img id="weatherIcon">
+					<p id="WDescription"></p>
+					<hr>
+					<p id="WVisibility"></p>
+				</div>
+			</div>
+			<div class="col-md-4 p-2">
+				<div id="TempDiv" class="grid-box p-2">
+					<h4><b>Temperature</b></h4>
+					<hr>
+					<img src="resources/thermometer.svg" width="100px">
+					<h2 id="Temp" style="align-self: center;">Temp</h2>
+					<p id="Feels" style="align-self: center;">Feels</p>
+					<hr>
+					<p id="Pressure" style="align-self: center;">Pressure</p>
+					<hr>
+					<p id="Humidity" style="align-self: center;">Humidity</p>
+				</div>
+			</div>
+		</div>
+		<!-- Second Row -->
+		<div class="row">
+			<div class="col-md-4 p-2">
+				<div id="WindDiv" class="grid-box p-2">
+					<h4><b>Wind information</b></h4>
+					<hr>
+					<p id="WindSpeed" style="align-self: center;">Speed</p>
+					<hr>
+					<p><b>Direction</b></p>
+					<img src="resources/location-arrow.svg" id="WindIcon" style="width:60px;">
+					<p id="WindDir" style="align-self: center;">Direction</p>
+					<hr>
+				</div>
+			</div>
+			<div class="col-md-4 p-2">
+				<div id="SunDiv" class="grid-box p-2">
+					<h4><b>Sunrise and sunset</b></h4>
+					<hr>
+					<img src="resources/sunrise.svg" width="50px">
+					<p id="Sunrise" style="align-self: center;">Sunrise</p>
+					<hr>
+					<img src="resources/sunset.svg" width="50px">
+					<p id="Sunset" style="align-self: center;">Sunset</p>
+					<hr>
+				</div>
+			</div>
+			<div class="col-md-4 p-2">
+				<div id="googleMap" class="grid-box p-2">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="apiKeyInputs" class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<label for="weatherKey">Weather Api Key</label>
+				<input type="text" id="weatherKey" name="weatherKey" value="">
+			</div>
+			<div class="col-md-4">
+				<label for="googleKey">Google Maps Api Key</label>
+				<input type="text" id="googleKey" name="googleKey" value="">
+			</div>
+			<div class="col-md-4">
+				<button id="saveKeys">Save Keys</button>
+				<button id="clearKeys">Clear Keys</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
